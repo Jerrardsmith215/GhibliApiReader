@@ -1,0 +1,260 @@
+/*
+============
+CSS RESET
+============
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+============
+Document Base
+============
+*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/roboto/Roboto-Regular.ttf');
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url('/assets/images/background-mini.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+p, h1, h2, h3 {
+  color: white;
+  font-family: 'Roboto';
+}
+
+audio {
+  height: 25px;
+}
+
+main {
+  height: 100%;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#prevButton {
+  transform: scaleX(-1);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url('/assets/images/background-tablet.png');
+    padding: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url('/assets/images/background.png');
+  }
+}
+
+
+/*
+============
+Moblie View
+============
+*/
+/*** Base ***/
+p, h2, h3 {
+  font-size: 1.6rem;
+}
+
+/*** Header ***/
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  border-bottom: 5px solid white;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+header img.--mobile {
+  height: 110px;
+  margin: 0 auto 35px auto;
+  width: 250px;
+}
+
+header img.--large {
+  display: none;
+}
+
+/*** Main content ***/
+#description, #stats {
+  margin: 0 auto 20px auto;
+  max-width: 95%;
+  text-align: center;
+}
+
+#stats p {
+  margin: 5px 0 0 0;
+}
+
+#stats p:first-child {
+  margin: 0;
+}
+
+/*** Footer ***/
+audio {
+  display: none;
+}
+
+/*
+============
+Tablet View
+============
+*/
+
+@media screen and (min-width: 768px) {
+  /*** Base ***/
+  p, h2, h3 {
+    font-size: 1.8rem;
+  }
+
+  /*** Header ***/
+  header { 
+    flex-direction: column-reverse;
+  }
+
+  header h1 {
+    font-size: 4.8rem;
+    margin-bottom: 50px;
+  }
+
+  /*** Main content ***/
+  #stats p {
+    margin: 15px 0 0 0;
+  }
+
+  /*** Footer ***/
+  footer {
+    bottom: 50px;
+    position: fixed;
+    width: 89.98%;
+  }
+
+  audio { 
+    display:block;
+  }
+}
+
+/*
+============
+Desktop View
+============
+*/
+
+@media screen and (min-width: 1024px) {
+  /*** Base ***/
+  p, h2, h3 {
+    font-size: 2rem;
+  }
+
+  /*** Header ***/
+  header {
+    border-bottom: 5px solid white;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
+
+  header img.--large {
+    display: block;
+  }
+
+  header img.--mobile {
+    display: none;
+  }
+
+  header h1 {
+    border: none;
+    margin: 0 0 0 50px;
+    margin-bottom: 2px;
+    position: relative;
+    text-align: left;
+    top: 152px;
+    width: 100%;
+  }
+
+  /*** Main content ***/
+  #description, #stats {
+    margin: 0 auto 25px auto;
+    max-width: 95%;
+    text-align: left;
+  }
+
+  #stats p {
+    margin: 25px 0 0 0;
+  }
+
+  /*** Picture block ***/
+  #PictureBlock {
+    border: 2px solid black;
+    height: 250px;
+    margin: 0 auto;
+    width: 250px;
+  }
+}
