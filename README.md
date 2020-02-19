@@ -1,1 +1,1 @@
-This project was created as a case-study. It simply requests data from an API using axios, a promised-based HTTP client, and renders said data in an aesthetically pleasing format. The projet features a lightweight, fully responsive, reactJS-based web app equipped gwith HTTP functionality. 
+This project was created as a case-study. It simply requests data from an API using Axios, a promised-based HTTP client, and renders said data in an aesthetically pleasing format. The projet features a lightweight, fully responsive, React.js-based web app equipped with HTTP functionality. 
